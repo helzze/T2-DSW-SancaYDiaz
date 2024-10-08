@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "5bd05fcf-01d0-4d9b-9bea-cdf014b92441",
+		"name": "DSW-T2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38701174"
+	},
+	"item": [
+		{
+			"name": "Listar Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Cliente por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/client/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Cliente por Correo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/client/buscarPorCorreo?correo=juan.perez@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"client",
+						"buscarPorCorreo"
+					],
+					"query": [
+						{
+							"key": "correo",
+							"value": "juan.perez@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Cliente Por Nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/client/buscarPorNombre?nombre=Juan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"client",
+						"buscarPorNombre"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Juan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cliente por Telefono",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/client/buscarPorTelefono?telefono=555-1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"client",
+						"buscarPorTelefono"
+					],
+					"query": [
+						{
+							"key": "telefono",
+							"value": "555-1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cliente por Parte del Nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/client/buscarPorNombreLike?nombre=an",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"client",
+						"buscarPorNombreLike"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "an"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contar Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/client/contarClientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"client",
+						"contarClientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Vehiculos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/vehiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Vehiculo por Marca",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/vehiculo/buscarPorMarca?marca=Toyota",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehiculo",
+						"buscarPorMarca"
+					],
+					"query": [
+						{
+							"key": "marca",
+							"value": "Toyota"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Vehiculo Por Año",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/vehiculo/buscarPorAnio?anio=2020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehiculo",
+						"buscarPorAnio"
+					],
+					"query": [
+						{
+							"key": "anio",
+							"value": "2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Vehiculo Por Precio Mayor A",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/vehiculo/buscarPorPrecioMayor?precio=15000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehiculo",
+						"buscarPorPrecioMayor"
+					],
+					"query": [
+						{
+							"key": "precio",
+							"value": "15000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Vehiculo Por Modelo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/vehiculo/buscarPorModelo?modelo=Corolla",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehiculo",
+						"buscarPorModelo"
+					],
+					"query": [
+						{
+							"key": "modelo",
+							"value": "Corolla"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
