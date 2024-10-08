@@ -4,6 +4,7 @@ import com.t2.dsw.concesionaria_t2.dto.VehiculoDto;
 import com.t2.dsw.concesionaria_t2.model.Vehiculo;
 import com.t2.dsw.concesionaria_t2.repository.VehiculoRepository;
 import com.t2.dsw.concesionaria_t2.service.interfaz.IVehiculoService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -82,4 +83,25 @@ public class VehiculoService implements IVehiculoService {
                         .build())
                 .collect(Collectors.toList());
     }
+
+    //Metodo transaccional registrar vehiculo
+    @Transactional
+    public VehiculoDto registrarVehiculo(VehiculoDto vehiculoDto) {
+        Vehiculo vehiculo = new Vehiculo();
+        vehiculo.setMarca(vehiculoDto.getMarca());
+        vehiculo.setModelo(vehiculoDto.getModelo());
+        vehiculo.setAnio(vehiculoDto.getAnio());
+        vehiculo.setPrecio(vehiculoDto.getPrecio());
+
+        Vehiculo savedVehiculo = vehiculoRepository.save(vehiculo);
+        return VehiculoDto.builder()
+                .idVehiculo(savedVehiculo.getIdvehiculo())
+                .marca(savedVehiculo.getMarca())
+                .modelo(savedVehiculo.getModelo())
+                .anio(savedVehiculo.getAnio())
+                .precio(savedVehiculo.getPrecio())
+                .build();
+    }
+
+
 }

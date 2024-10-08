@@ -83,4 +83,18 @@ public class ClientController {
         Integer count = clientService.contarClientes();
         return new ResponseEntity<>(count, HttpStatus.OK);
     }
+
+
+    @PostMapping("/registrar")
+    public ResponseEntity<ClientDto> registrarCliente(@RequestBody ClientDto clientDto) {
+        ClientDto nuevoCliente = clientService.registrarCliente(clientDto);
+        return new ResponseEntity<>(nuevoCliente, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}/actualizarTelefono")
+    public ResponseEntity<ClientDto> actualizarTelefono(@PathVariable Integer id, @RequestParam String nuevoTelefono) {
+        ClientDto clienteActualizado = clientService.actualizarTelefonoCliente(id, nuevoTelefono);
+        return new ResponseEntity<>(clienteActualizado, HttpStatus.OK);
+    }
+
 }

@@ -21,4 +21,8 @@ public interface IClientService {
     List<ClientDto> obtenerClientesPorNombreLike(String nombre);
 
     Integer contarClientes();
+
+    ClientDto registrarCliente(ClientDto clientDto);
+
+    ClientDto actualizarTelefonoCliente(Integer idCliente, String nuevoTelefono);
 }

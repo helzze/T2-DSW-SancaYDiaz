@@ -19,4 +19,5 @@ public interface IVehiculoService {
 
     List<VehiculoDto> obtenerVehiculosPorModelo(String modelo);
 
+    VehiculoDto registrarVehiculo(VehiculoDto vehiculoDto);
 }
